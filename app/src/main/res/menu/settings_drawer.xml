@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home2"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="Nisse" />
+        <item
+            android:id="@+id/nav_regions"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_regions" />
+        <item
+            android:id="@+id/nav_my_areas"
+            android:icon="@drawable/ic_warning_black_24dp"
+            android:title="@string/menu_critical" />
+    </group>
+
+    <item android:title="Trips">
+        <menu>
+            <item
+                android:id="@+id/nav_register_trip"
+                android:icon="@drawable/ic_add_black_24dp"
+                android:title="@string/menu_register_trip" />
+        </menu>
+    </item>
+
+    <item android:title="Misc">
+
+        <menu>
+            <item
+                android:id="@+id/nav_last_updated"
+                android:icon="@drawable/ic_add_black_24dp"
+                android:title="Something something" />
+
+        </menu>
+    </item>
+
+
+</menu>

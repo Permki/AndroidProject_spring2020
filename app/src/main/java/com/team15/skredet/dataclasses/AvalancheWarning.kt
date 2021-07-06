@@ -1,0 +1,33 @@
+package com.team15.skredet.dataclasses
+
+data class AvalancheWarning(
+    val Author: Any,
+    val AvalancheAdvices: List<AvalancheAdvice>,
+    val AvalancheDanger: Any,
+    val AvalancheProblems: Any,
+    val CountyList: List<County>,
+    val CurrentWeaklayers: Any,
+    val DangerLevel: String,
+    val DangerLevelName: Any,
+    val EmergencyWarning: Any,
+    val LangKey: Int,
+    val LatestAvalancheActivity: Any,
+    val LatestObservations: Any,
+    val MainText: String,
+    val MountainWeather: Any,
+    val MunicipalityList: List<Municipality>,
+    val NextWarningTime: String,
+    val PreviousWarningRegId: Any,
+    val PublishTime: String,
+    val RegId: Int,
+    val RegionId: Int,
+    val RegionName: String,
+    val RegionTypeId: Int,
+    val RegionTypeName: String,
+    val SnowSurface: Any,
+    val UtmEast: Int,
+    val UtmNorth: Int,
+    val UtmZone: Int,
+    val ValidFrom: String,
+    val ValidTo: String
+)

@@ -1,0 +1,160 @@
+<resources>
+
+    <!--TOP LEVEL STRINGS-->
+    <string name="main_activity">MainActivity</string>
+    <string name="app_name">Monitum</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Monitum</string>
+    <string name="nav_header_subtitle">Hovedsider</string>
+    <string name="nav_header_settings_subtitle">Innstillinger</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_help">Om Monitum</string>
+    <string name="nav_settings">Innstillinger</string>
+    <string name="nav_animate">Animer</string>
+    <string name="nav_nowifi">Nettverk utilgjengelig</string>
+    <string name="press_within_boundaries">Vennligst trykk innenfor Norge …</string>
+
+
+    <!-- MENU -->
+    <string name="menu_home">Home</string>
+    <string name="menu_regions">Regionliste</string>
+    <string name="menu_critical">Mine områder</string>
+    <string name="menu_map">Situasjonskart</string>
+    <string name="menu_register_trip">Registrer tur</string>
+    <string name="menu_updated">Sist oppdatert %s</string>
+    <string name="menu_update">Oppdater</string>
+    <string name="menu_settings">Innstillinger</string>
+    <string name="menu_details">Detaljer for</string>
+
+    <string name="home_second">Home Second</string>
+
+    <!-- API-CALLS -->
+    <string name="all_regions_details_url">https://api01.nve.no/hydrology/forecast/avalanche/v5.0.1/api/RegionSummary/Detail/1/%s/%s</string>
+    <string name="region_summary_simple">"https://api01.nve.no/hydrology/forecast/avalanche/v5.0.1/api/RegionSummary/Simple/1/%s/%s</string>
+    <string name="region_stamdata_url">https://api01.nve.no/hydrology/forecast/avalanche/v5.0.1/api/Region/</string>
+    <string name="by_coordinates_details_general">https://api01.nve.no/hydrology/forecast/avalanche/v5.0.1/api/AvalancheWarningByCoordinates/Detail/%s/%s/1/%s/%s</string>
+
+    <!--MAP CARDVIEW INFO -->
+    <string name="dangerlevel_map_text">Farenivå %s</string>
+    <string name="no_dangers">Ingen farer</string>
+
+    <!-- MAP FUNCTIONS -->
+    <string name="removed_favorite">"Fjernet fra favoritter"</string>
+    <string name="added_favorite">"Lagt til i favoritter"</string>
+
+    <!-- ADMIN INFO -->
+    <string name="updated_time_string">"Oppdatert %s"</string>
+
+    <!-- DETAILEDFRAG -->
+    <string name="adviceHeader">"Råd: \n"</string>
+    <string name="maintextHeader">"Oppsummert: \n"</string>
+    <string name="no_data_available">"Ingen data tilgjengelig"</string>
+    <string name="no_data_available_twoline">"Ingen data\ntilgjengelig"</string>
+    <string name="next_advice_text">"Trykk på bildet for neste råd"</string>
+
+
+    <!-- TESTING -->
+    <string name="test_result_header">"TEST RESULTED IN: "</string>
+
+
+    <string-array name="maptypes">
+        <item>Vanlig</item>
+        <item>Terreng</item>
+        <item>Satelitt</item>
+        <item>Hybrid</item>
+    </string-array>
+
+    <string-array name="speed">
+        <item>Sakte</item>
+        <item>Middels</item>
+        <item>Hurtig</item>
+    </string-array>
+
+    <!-- PERSISTENT_DATA -->
+    <string name="background_running">"Skredvarsleren kjører i bakgrunnen"</string>
+    <string name="youll_be_notified">"Du vil få varsler om situasjonen endres, god tur!"</string>
+    <string name="u_data_deleted">"Dine brukerdata er slettet, favoritter og instillinger blir tilbakestilt ved neste oppstart av applikasjonen"</string>
+
+    <!-- INFOFRAGMENTS -->
+    <string name="infofrag0_maintext">"
+Denne appen gir deg varsler om
+skred i hele Norge og på Svalbard.
+
+Hold deg oppdatert med siste nytt,
+råd og tips fra NVEs eksperter.
+
+Planlegger du en tur?
+Lagre områder og motta varsler
+dersom farenivået endrer seg.
+
+Sveip videre for en kjapp innføring!
+
+Hilsen oss i Team 15"</string>
+
+    <string name="infofrag1_maintext">"
+Her kan du se oversikten over hele landet.
+Regionenes farge gjenspeiler graden av fare fra 0 til 5.
+
+Du kan sveipe mellom dager ved å trykke på datoen i venstre hjørne og bruke knappen som dukker opp.
+
+Ønsker du å se flere dager kan du justere det under innstillinger.
+    </string>
+
+    <string name="infofrag2_maintext">"
+Ved å trykke på kartet får du mer informasjon om regionen.
+
+Dersom du endrer dag vil også informasjonen i det lille vinduet endre seg.
+
+Du kan trykke på bildet for å få flere råd, og du kan trykke på utzooming for å komme helt ut igjen.
+    </string>
+
+    <string name="infofrag3_maintext">"
+Ved å trykke på navnet eller + tegnet åpner du informasjonssiden for den aktuelle regionen.
+
+Her kan du bla i alle historiske datoer ved å trykke på kalenderen eller bare bla manuelt.
+
+Ved å trykke på bildene vises flere tips og råd.
+    </string>
+
+    <string name="infofrag4_maintext">"
+Regionene kan legges til som favoritter når du måtte ønske det.
+Trykk på hjertet der du ser det for å legge til eller fjerne en region fra favorittene dine.
+Favoritter legger seg i favorittlisten for enkel tilgang, og du vil også kunne motta varsel dersom farenivået endrer seg for noen av dine favoritter.
+
+    </string>
+
+    <string name="infofrag5_maintext">"
+Det finnes en liste for favoritter og en liste for alle regioner.
+
+I disse listene kan man legge til og fjerne favoritter, men også trykke seg videre inn til detaljinformasjon ved å trykke på Mer info eller + tegnet
+    </string>
+
+
+    <string name="infofrag6_maintext">"
+Under innstillinger kan du
+Endre karttype
+Velge om du vil motta varsler om endringer i favorittregionene
+Skru av farger
+Slette data
+Endre på antall dager som vises eller variere animasjonshastighet
+    </string>
+
+
+    <string name="infofrag7_maintext">"
+Monitum er opptatt av sikkerhet, og derfor er appen lagt opp slik at den varsler deg dersom nettverket bortfaller når den forsøker å skaffe oppdatert data.
+
+Dersom du ikke gjør ting som krever nett vil appen fortsette å kjøre. Hvis ikke vil den stoppe opp og vente på at nettverket bedrer seg.
+Når nettet kommer opp igjen vil appen selv oppdage det og fortsette der den slapp.
+    </string>
+
+    <string name="infofrag8_maintext">"
+I minimenyen kan du sette igang animasjon for tidsperioden du har valgt.
+Du også gå inn til innstillinger slik som i hovedmenyen.
+
+Når du lukker denne introduksjonen vil den ikke vises igjen ved oppstart. Dersom du ønsker å se den igjen kan du trykke på nederste valg i minimenyen.
+
+Vi håper du finner fram og får nytte av Monitum - skredvarsleren som varsler deg når det trengs.
+    </string>
+
+</resources>

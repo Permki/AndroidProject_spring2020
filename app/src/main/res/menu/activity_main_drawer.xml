@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="@string/menu_map" />
+        <item
+            android:id="@+id/nav_regions"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_regions" />
+        <item
+            android:id="@+id/nav_my_areas"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/menu_critical" />
+
+        <item
+            android:id="@+id/nav_update"
+            android:icon="@drawable/ic_refresh_black_24dp"
+            android:title="@string/menu_update" />
+    </group>
+
+
+    <item android:title="Administrativt">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/nav_settings" />
+
+        </menu>
+    </item>
+
+
+</menu>

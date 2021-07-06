@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  <color name="colorPrimary">#6200EE</color>
+      <color name="colorPrimaryDark">#3700B3</color>
+      <color name="colorAccent">#03DAC5</color>
+  -->
+
+    <!--   <color name="colorAccent">#D81B60</color> -->
+    <color name="colorAccent">#3F51B5</color>
+    <color name="colorPrimaryBlue">#3F51B5</color>
+    <color name="transparant">#80000000</color>
+
+    <!--    <color name="colorPrimary">#3F51B5</color> -->
+    <!--   <color name="colorPrimaryDark">#303f9f</color> -->
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimary">#123456</color>
+    <color name="colorWhite">#ffffff</color>
+    <!--    <color name="colorDark">#37474f</color> -->
+    <!--   <color name="colorPrimary">#37474f</color> -->
+    <color name="colorButtonShade">#263238</color>
+    <color name="colorRed">#E74C3C</color>
+    <color name="colorGreen">#229954</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorSpinner">#D0ECE7</color>
+</resources>

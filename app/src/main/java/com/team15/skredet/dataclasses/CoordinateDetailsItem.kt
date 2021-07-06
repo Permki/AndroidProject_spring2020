@@ -1,0 +1,33 @@
+package com.team15.skredet.dataclasses
+
+data class CoordinateDetailsItem(
+    val Author: String,
+    val AvalancheAdvices: List<AvalancheAdvice>,
+    val AvalancheDanger: String,
+    val AvalancheProblems: List<AvalancheProblem>,
+    val CountyList: List<County>,
+    val CurrentWeaklayers: String,
+    val DangerLevel: String,
+    val DangerLevelName: String,
+    val EmergencyWarning: String,
+    val LangKey: Int,
+    val LatestAvalancheActivity: String,
+    val LatestObservations: String,
+    val MainText: String,
+    val MountainWeather: MountainWeather,
+    val MunicipalityList: List<Municipality>,
+    val NextWarningTime: String,
+    val PreviousWarningRegId: Int,
+    val PublishTime: String,
+    val RegId: Int,
+    val RegionId: Int,
+    val RegionName: String,
+    val RegionTypeId: Int,
+    val RegionTypeName: String,
+    val SnowSurface: String,
+    val UtmEast: Int,
+    val UtmNorth: Int,
+    val UtmZone: Int,
+    val ValidFrom: String,
+    val ValidTo: String
+)

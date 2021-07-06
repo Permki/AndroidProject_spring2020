@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:duration="100"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.map.MapFragment">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ProgressBar
+        android:id="@+id/mapProgressbar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="7dp"
+        android:max="9"
+        android:progress="0"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/rightBracket"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/leftBracket"
+        android:layout_width="15dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/slider_text" />
+
+    <TextView
+        android:id="@+id/slider_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:padding="0dp"
+        app:layout_constraintStart_toEndOf="@id/leftBracket"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/rightBracket"
+        android:layout_width="15dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        app:layout_constraintStart_toEndOf="@id/slider_text"
+        app:layout_constraintTop_toTopOf="@id/slider_text" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_map"
+        android:layout_width="190dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="80dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/element_day"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="monospace"
+                android:padding="2dp"
+                android:text="SelectedDay"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/info_close_button"
+                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/profilePic_map"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/textview_border"
+                android:clickable="true"
+                android:padding="2dp"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/emptyPic"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="2dp"
+                android:layout_margin="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/textview_border"
+                android:fontFamily="monospace"
+                android:padding="2dp"
+                android:text="\n\n\nIngen data\ntilgjengelig"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/element_region_name_map" />
+
+
+            <TextView
+                android:id="@+id/element_dangerlevel_map"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/textview_border"
+                android:fontFamily="monospace"
+                android:padding="2dp"
+                android:text="Farenivå"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/element_region_name_map" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/element_dangerlevel_map">
+
+                <TextView
+                    android:id="@+id/element_description_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="monospace"
+                    android:padding="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/element_dangerlevel_map" />
+
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/element_region_name_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/textview_border"
+                android:fontFamily="monospace"
+                android:padding="2dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profilePic_map" />
+
+            <ImageButton
+                android:id="@+id/info_close_button"
+                android:layout_width="39dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_close_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pictureIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="57dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintTop_toTopOf="@id/profilePic_map"
+                app:layout_constraintStart_toStartOf="@id/profilePic_map" />
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trykk på bildet for neste råd"
+                app:layout_constraintTop_toBottomOf="@id/element_day"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="38dp" />
+
+
+            <ImageButton
+                android:id="@+id/openDetailedInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSpinner"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:src="@drawable/ic_add_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="29dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/ic_favorite_black_24dp"
+                android:tint="#CCFFFFFF"
+                app:layout_constraintEnd_toStartOf="@id/info_close_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageButton
+        android:id="@+id/zoomOut"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="46dp"
+        android:backgroundTint="#A6FFFFFF"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_action_zoomout_foreground"
+        android:tint="#4D3E3B3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

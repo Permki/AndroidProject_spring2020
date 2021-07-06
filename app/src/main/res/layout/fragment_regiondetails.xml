@@ -1,0 +1,186 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:layout_margin="5dp"
+    android:fadingEdge="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/detailsProgressbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginBottom="328dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/elementNoImageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="@string/no_data_available_twoline"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.111" />
+
+        <ImageButton
+            android:id="@+id/detail_picture"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateBox" />
+
+        <Button
+            android:id="@+id/minusDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#66FFFFFF"
+            android:text="- dag"
+            app:layout_constraintBottom_toBottomOf="@id/detail_picture"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/plusDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#66FFFFFF"
+            android:text="+ dag"
+            app:layout_constraintBottom_toBottomOf="@id/detail_picture"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_picture" />
+
+        <TextView
+            android:id="@+id/dangerlevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/datePicker"
+            app:layout_constraintEnd_toStartOf="@id/detail_favoriteButton"
+            tools:layout_editor_absoluteY="219dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_picture" />
+
+        <TextView
+            android:id="@+id/mainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingVertical="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_picture" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainText" />
+
+        <TextView
+            android:id="@+id/details_advices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingVertical="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainText" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainText" />
+
+        <TextView
+            android:id="@+id/dateBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/detail_favoriteButton"
+            android:layout_width="43dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/ic_favorite_black_24dp"
+            android:tint="#CCFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/datePicker"
+            android:layout_width="49dp"
+            android:layout_height="22dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/dateBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_date_range_black_24dp" />
+
+        <TextView
+            android:id="@+id/infoDetailHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_advice_text"
+            app:layout_constraintBottom_toBottomOf="@id/detail_picture"
+            app:layout_constraintEnd_toStartOf="@id/plusDay"
+            app:layout_constraintStart_toEndOf="@id/minusDay"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="38dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+    <!--
+        <ImageButton
+            android:id="@+id/expand"
+            android:layout_width="59dp"
+            android:layout_height="45dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_action_zoomout_foreground" />
+     android:background="#F0FFFF"
+     -->
